@@ -28,7 +28,7 @@
     justify-content: space-between;
     padding: 2em;  
   }
-  a {
+  .wrapper a {
     color: white;
     border: 2px solid white;
     background-color: #ff8f29;
@@ -65,7 +65,7 @@
     padding: 1em;
     width: 300px;
   }
-  a:hover {
+  .wrapper a:hover {
     background-color: #1d5fb7;
   }
   #input:hover {
@@ -132,9 +132,6 @@
     height:200px;
     background-color:#1d5fb7;
     clip-path: polygon(0 60%, 100% 0%, 100% 100%, 0% 100%);
-  }
-  
-  footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
