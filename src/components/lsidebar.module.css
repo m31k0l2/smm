@@ -1,0 +1,81 @@
+.sidebar {
+    border: 1px solid rebeccapurple;
+    width: 250px;
+    height: 730px;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+}
+.hide, .item, .exit {
+    display: flex;
+}
+.hide, .item {
+    border-bottom: 1px solid rebeccapurple;    
+}
+.exit {
+    border-top: 1px solid rebeccapurple;
+}
+.button {
+    flex-basis: 40px;
+    text-align: center;
+}
+.item {
+    flex-basis: 55px;    
+}
+.empty {
+    flex-basis: auto;
+    height: 730px;
+    background-color: beige;
+}
+.sidebar a {
+    text-decoration: none;
+    color: rebeccapurple;
+}
+.item a, .button a {
+    display: inline-block;
+    width: 100%;
+}
+.item a {
+    padding: 8px 10px;    
+}
+.item a:hover, .button a:hover, .hideSidebar > .userSection a:hover  {
+    background-color: beige;
+}
+.active, .active a:hover {
+    background-color: rebeccapurple;
+}
+.active a:hover, .active a {
+    color: white;
+}
+.transform { 
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+}
+.hideSidebar {
+    width: 50px;
+}
+.hideSidebar > div > a {
+    display: inline-block;
+    width: 100%;
+}
+.hideSidebar > div > a {
+    display: block;
+}
+.hideSidebar > div > a span {
+    opacity: 0;
+    overflow: hidden;
+    display: inline-block;
+    height: 0;
+}
+.transform a span {
+    opacity: 1;
+}
+.sidebar i {
+    font-size: 1.5em;    
+}
+.sidebar span {
+    position: relative;
+    top: -5px;
+    padding-left: 5px;
+}
