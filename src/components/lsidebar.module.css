@@ -1,35 +1,39 @@
+@value colors: "./colors.css";
+@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
+
 .sidebar {
-    border: 1px solid rebeccapurple;
+    border: 1px solid mGrayBorder;
     width: 250px;
-    height: 730px;
+    height: 100vh;
     /* margin: auto; */
     display: flex;
     flex-direction: column;
+    background-color: mLightGray;
 }
 .hide, .item, .exit {
     display: flex;
 }
 .hide, .item {
-    border-bottom: 1px solid rebeccapurple;    
+    border-bottom: 1px solid mLightGray;    
 }
 .exit {
-    border-top: 1px solid rebeccapurple;
+    border-top: 1px solid mGrayBorder;
 }
 .button {
     flex-basis: 40px;
     text-align: center;
+    background-color: mDarkGray;
 }
 .item {
     flex-basis: 55px;    
 }
 .empty {
     flex-basis: auto;
-    height: 730px;
-    background-color: beige;
+    height: 100vh;    
 }
 .sidebar a {
     text-decoration: none;
-    color: rebeccapurple;
+    color: mRef;
 }
 .item a, .button a {
     display: inline-block;
@@ -39,10 +43,10 @@
     padding: 8px 10px;    
 }
 .item a:hover, .button a:hover, .hideSidebar > .userSection a:hover  {
-    background-color: beige;
+    background-color: mGray;
 }
 .active, .active a:hover {
-    background-color: rebeccapurple;
+    background-color: mSelected;
 }
 .active a:hover, .active a {
     color: white;
@@ -68,6 +72,20 @@
     display: inline-block;
     height: 0;
 }
+.hideSidebar > div[data-descr]:hover::after {
+    content: attr(data-descr);
+    position: relative;
+    left: 10px;
+    top: 0;
+    min-width: 100px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: mSelected;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    z-index: 1;
+}
 .transform a span {
     opacity: 1;
 }
@@ -78,4 +96,7 @@
     position: relative;
     top: -5px;
     padding-left: 5px;
+}
+.hideRef:hover, .exitRef:hover {
+    font-size: 1.1em;
 }

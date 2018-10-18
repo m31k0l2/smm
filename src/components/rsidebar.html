@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sidebar</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="rsidebar.css" />
+</head>
+<body>
+    <div class="sidebar transform">
+        <div class="hat"><span>Фильтр постов</span></div>
+        <div class="filterItem item">
+            <label>По ID поста
+                <input type="number" min="0">
+            </label>
+        </div>
+        <div class="calendar item">
+            <label>Период с
+                <input type="date" min="2018-10-01" max="2019-10-01">
+            </label>
+            <label>по
+                <input type="date" min="2018-10-01" max="2019-10-01">
+            </label>
+        </div>
+        <div class="projectFilter item">
+            <label>Проект
+                <select>
+                    <option value="">--Все--</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+            </label>
+        </div>
+        <div class="accountFilter item">
+            <label><input type="checkbox" checked="checked">Roland Dischein</label>
+        </div>
+        <div class="item">
+            <button>Сбросить фильтры</button>
+        </div>
+        <div class="empty"></div>
+        <div class="hide item">
+            <a href="#">Спрятать</a>
+        </div>
+    </div>    
+</body>
+</html>
