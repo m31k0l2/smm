@@ -1,0 +1,120 @@
+@value colors: "./colors.css";
+@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
+
+.sidebar {
+    outline: 1px solid mGrayBorder;
+    width: 380px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.hat {
+    flex-basis: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-size: 1.2em;
+    background-color: mSelected;
+    color: white;
+}
+.hat i {
+    font-size: 1.2em;  
+    padding-right: 0.5em;  
+}
+.hide i {
+    font-size: 1.5em;
+    position: relative;
+    top: 5px;
+}
+.sidebar label {
+    margin-right: 10px; /* Расстояние от текста до текстового поля */
+    line-height: 20px; /* Выравниваем по высоте */
+}
+.sidebar a {
+    text-decoration: none;
+    color: mRef;
+    display: inline-block;
+    width: 100%;
+}
+.sidebar select {
+    width: 290px;
+}
+.body > div:not(.accountFilter) input {
+    width: 120px;
+}
+.sidebar label+input {
+    margin-right: 10px; /* Расстояние от текста до текстового поля */    
+}
+.item {
+    flex-basis: 30px;
+    padding: 10px;
+}
+.body > div:not(.accountFilter) label {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.empty {
+    flex-basis: 100vh;
+} 
+.hide {
+    flex-basis: 30px;
+    border-bottom: 0; 
+    border-top: 1px solid mLightGray;   
+    text-align: center;
+    background-color: mDarkGray;
+}
+.transform { 
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+}
+.hideSidebar {
+    width: 40px;
+}
+.hideSidebar .body {
+    visibility: hidden;
+    position: absolute;
+}
+.hideSidebar .hat {
+    flex-basis: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: mBlue;
+}
+.hideSidebar .hat span {
+    writing-mode: vertical-rl;
+    text-align: center;
+    transform: rotate(180deg);
+    max-width: 50%;
+    margin-right: 20px;
+}
+.hideSidebar:hover {
+    width: 50px; 
+}
+.hideSidebar .hat:hover {
+    background-color: mSelected;   
+}
+.hat div {
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+}
+.hideSidebar .hat div {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+.hideSidebar .hat div span {
+    margin-left: -2px;
+}

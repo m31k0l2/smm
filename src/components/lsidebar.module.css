@@ -1,6 +1,9 @@
 @value colors: "./colors.css";
 @value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
 
+body::-webkit-scrollbar {
+    display: none;
+}
 .sidebar {
     border: 1px solid mGrayBorder;
     width: 250px;
@@ -16,8 +19,12 @@
 .hide, .item {
     border-bottom: 1px solid mLightGray;    
 }
+.hide {
+    border-top: 0;
+}
 .exit {
     border-top: 1px solid mGrayBorder;
+    border-bottom: 0;
 }
 .button {
     flex-basis: 40px;
@@ -58,13 +65,11 @@
 }
 .hideSidebar {
     width: 50px;
+    position: fixed;
 }
 .hideSidebar > div > a {
     display: inline-block;
     width: 100%;
-}
-.hideSidebar > div > a {
-    display: block;
 }
 .hideSidebar > div > a span {
     opacity: 0;
