@@ -1,8 +1,8 @@
 import React from "react"
-import styles from "./index.module.css"
+import styles from "./index/index.module.css"
 import { Link } from "gatsby"
-import freeofcharge from "./freeofcharge.png"
-import social from "./social.png"
+import freeofcharge from "./index/pics/freeofcharge.png"
+import social from "./index/pics/social.png"
 
 export default () => (
 <div>

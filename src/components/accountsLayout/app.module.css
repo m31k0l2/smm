@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height:100vh;
+    display: grid;
+    grid-template-areas:    
+        "lsidebar main";
+    grid-template-columns: auto 1fr;          
+}
+.lsidebar { grid-area: lsidebar; }
+.main { grid-area: main; }

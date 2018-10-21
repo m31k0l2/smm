@@ -1,0 +1,39 @@
+@value colors: "../../colors/colors.css";
+@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
+.button {
+    text-align: center;
+    display: flex;    
+    align-items: center;
+    height: inherit;
+}
+.left { 
+    justify-content: flex-start; 
+    margin-left: 10px;
+}
+.hRef {
+    color: mRef;
+}
+.button span {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 0.2em;
+    padding-right: 1em;
+}
+.button i {
+    font-size: 1.5em;
+    color: mRef;
+    margin-top: 0.3em; 
+    margin-left: 10px;  
+}
+.button:hover {
+    cursor: pointer
+}
+.button:hover {
+    background-color: mGray;
+}
+.selected, .selected:hover {
+    background-color: mSelected;
+}
+.selected i, .selected span {
+    color: white;
+}

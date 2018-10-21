@@ -1,0 +1,52 @@
+@value colors: "../../colors/colors.css";
+@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
+
+body::-webkit-scrollbar {
+    display: none;
+}
+.sidebar {
+    border: 1px solid mGrayBorder;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: mLightGray;
+}
+.sidebar a {
+    text-decoration: none;
+    height: 100%;
+}
+.button {
+    background-color: mDarkGray;
+}
+.empty {
+    flex-basis: auto;
+    height: 100vh;    
+}
+.transform { 
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+}
+.hideSidebar {
+    width: 50px;
+    /* position: fixed; */
+}
+div[data-descr] {
+    max-height: 55px;
+}
+.hideSidebar > div[data-descr]:hover::after {
+    content: attr(data-descr);
+    display: inline-block;
+    position: relative;
+    left: 60px;
+    top: -35px;
+    line-height: 2em;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: mSelected;
+    color: white;
+    z-index: 1;
+}

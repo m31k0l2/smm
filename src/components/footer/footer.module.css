@@ -1,0 +1,9 @@
+.footer {
+    border-top: solid 1px gainsboro;
+    border-bottom: solid 1px gainsboro;
+    text-align: center;
+}
+.footer h4 {
+    margin: 0;
+    line-height: 100px;
+}

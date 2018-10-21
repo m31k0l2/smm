@@ -1,0 +1,29 @@
+@value colors: "../colors/colors.css";
+@value mBlue, mRef from colors;
+
+.account {
+    display: flex;
+    justify-content: baseline;
+    flex-direction: row;
+}
+.account > span {
+    width: fit-content;
+}
+.clickable > span {
+    color: mRef;
+    border-bottom: 1px dotted;      
+}
+.clickable span:hover {
+    color: red;
+    cursor: pointer;
+}
+.account i {
+    background-color: mBlue;
+    color: white;
+    padding: 0.2em;
+    border-radius: 0.75em;
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    margin-right: 0.2em;
+}
