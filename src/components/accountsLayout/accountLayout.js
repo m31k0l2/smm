@@ -1,7 +1,7 @@
 import React from "react"
-import LSidebar from "../sidebar/lsidebar/lsidebar"
+import LSidebar from "../sidebar/lsidebar/connectedLSidebar"
 import MainAccounts from "../mainAccounts/main"
-import styles from "./app.module.css"
+import styles from "./accountLayout.module.css"
 
 export default () => (    
   <div className={styles.container}>

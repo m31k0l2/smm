@@ -1,8 +1,8 @@
 import React from "react"
-import LSidebar from "../sidebar/lsidebar/lsidebar"
-import RSidebar from "../sidebar/rsidebar/rsidebar"
+import LSidebar from "../sidebar/lsidebar/connectedLSidebar"
+import RSidebar from "../sidebar/rsidebar/connectedRSidebar"
 import MainPage from "../main/main"
-import styles from "./app.module.css"
+import styles from "./postLayout.module.css"
 
 export default () => (    
   <div className={styles.container}>

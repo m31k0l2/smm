@@ -45,9 +45,9 @@ class Dialog extends React.Component {
                     <div className={styles.accounts}>
                         <div>
                             <Account title="Roland Dischein" isClickable={false} />
-                            <input type="date" value="2018-10-21" />
+                            <input type="date" defaultValue="2018-10-21" />
                             <span>в</span>
-                            <input type="time" value="18:10" />
+                            <input type="time" defaultValue="18:10" />
                             <a href=""><FaBan/></a>
                         </div>
                     </div>
