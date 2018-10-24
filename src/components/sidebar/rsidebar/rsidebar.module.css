@@ -62,9 +62,6 @@
 .sidebar select {
     width: 290px;
 }
-.body > div:not(.accountFilter) input {
-    width: 120px;
-}
 .sidebar label+input {
     margin-right: 10px; /* Расстояние от текста до текстового поля */    
 }
@@ -72,7 +69,7 @@
     flex-basis: 30px;
     padding: 10px;
 }
-.body > div:not(.accountFilter) label {
+.body > div:not label {
     font-size: 0.8em;
     font-weight: bold;
 }
@@ -139,12 +136,4 @@
 }
 .hideSidebar .hat div span {
     margin-left: -2px;
-}
-.accountFilter {
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    align-items: center;
-}
-.accountFilter span {
-    width: 100%;
 }

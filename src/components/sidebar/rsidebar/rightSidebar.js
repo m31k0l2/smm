@@ -4,9 +4,13 @@ import { FaFilter } from 'react-icons/fa'
 import SideBarButton from "../button/button"
 import Calendar from 'react-calendar'
 import Button from '../../button/button'
-import Account from '../../accountLink/accountLink'
+import AccountFilter from "./accountFilter"
+import { graphql } from "gatsby"
 
-export default ({isToggleOn, handleClick}) => (
+export default ({isToggleOn, handleClick, edges}) => {
+    console.log("fdggdfgdfgdfgdgdfgdf");
+    console.log(edges);
+    return (
     <div className={[styles.sidebar, styles.transform, styles[isToggleOn ? '' : 'hideSidebar']].join(' ')}>
         <div className={styles.hat} onClick={!isToggleOn ? handleClick : null}>
             <div><i><FaFilter/></i><span>Фильтр постов</span></div>
@@ -21,12 +25,7 @@ export default ({isToggleOn, handleClick}) => (
             <div className={[styles.calendar, styles.item].join(" ")}>
                 <Calendar />
             </div>
-            <div className={[styles.accountFilter, styles.item].join(" ")}>
-                <input type="checkbox" defaultChecked="checked" id="user" />
-                <label htmlFor="user" className={styles.account} style={{fontSize: "0.8em"}} >
-                    <Account title="Roland Dischein"/>
-                </label>
-            </div>
+            <div className={styles.item}><AccountFilter data={["RD", "TR"]}/></div>
             <div className={styles.item} style={{fontSize: "0.8em"}}>
                 <Button title="Сбросить фильтры" icon="cancel"/>
             </div>
@@ -42,4 +41,14 @@ export default ({isToggleOn, handleClick}) => (
             </div>
         </div>
     </div>
-)
+)}
+
+export const query = graphql`
+  fragment AccountsFragment on AccountsJson {
+    edges {
+        node {
+            name
+        }
+    }
+  }
+`

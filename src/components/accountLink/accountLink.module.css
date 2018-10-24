@@ -19,11 +19,18 @@
 }
 .account i {
     background-color: mBlue;
-    color: white;
-    padding: 0.2em;
-    border-radius: 0.75em;
-    height: 1.5em;
-    width: 1.5em;
-    display: inline-block;
-    margin-right: 0.2em;
+    color: white;    
+    display: inline-block;    
+}
+
+.normal i {
+    font-size: 14px;
+    margin-right: 4px;
+    margin-top: 3px;
+    border-radius: 8px;
+    height: 17px;
+    width: 17px;
+}
+.normal span {
+    font-size: 14px;
 }

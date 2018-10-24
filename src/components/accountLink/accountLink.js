@@ -6,6 +6,6 @@ const clickable = {
     true: styles.clickable,
     false: ""
 }
-export default ({title="accName", isClickable=true}) => (
-    <span className={[styles.account, clickable[isClickable]].join(" ")}><i><FaVk /></i><span>{title}</span></span>
+export default ({title="accName", isClickable=true, font="normal"}) => (
+    <span className={[styles.account, clickable[isClickable], styles[font]].join(" ")}><i><FaVk /></i><span>{title}</span></span>
 )
