@@ -1,5 +1,3 @@
-@value colors: "../colors/colors.css";
-@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected, mDarkBlue from colors;
 .postDialog {
     border: 1px solid;
     border-radius: 5px;
@@ -23,11 +21,12 @@
     display: flex;
     flex-basis: 60px;
     justify-content: space-between; 
-}
-.header h2 {
-    font-weight: 300;
-    font-size: 1.8em;
-    margin-top: 10px;
+
+    h2 {
+        font-weight: 300;
+        font-size: 1.8em;
+        margin-top: 10px;
+    }
 }
 .info {
     align-self: flex-start;
@@ -36,15 +35,16 @@
     width: 600px;
     padding: 0;
     margin: 0;    
-}
-.info span {
-    position: relative;
-    top: -30px;
-    font-size: 12px;
-    left: 50px;
-    padding: 5px;
-    background-color: white;
-    color: #678;
+
+    span {
+        position: relative;
+        top: -30px;
+        font-size: 12px;
+        left: 50px;
+        padding: 5px;
+        background-color: white;
+        color: #678;
+    }
 }
 .container textarea {
     margin-top: -20px;
@@ -52,28 +52,13 @@
     width: 100%;    
     height: 55px;
     overflow-y:hidden;
-}
-.container textarea:focus::placeholder {
-    color: transparent;
+
+    &:focus::placeholder {
+        color: transparent;
+    }
 }
 div.buttons > span {
     margin-right: 5px;
-}
-.accounts > div {
-    display: grid;
-    grid-template-columns: 3fr 2fr 10px 1fr 20px; 
-    width: 100%;   
-    align-items: center;
-    height: fit-content;
-}
-.accounts a {
-    display: inline-block;
-    margin: 5px;
-    padding: 3px;
-    color: mDarkBlue;
-}
-.accounts a:hover {
-    color: red;
 }
 .close {
     position: absolute;
@@ -86,18 +71,12 @@ div.buttons > span {
     align-items: baseline;
     border-bottom: 1px solid #c8c8c8;
     margin-top: 10px;
+
+    h3 {
+        font-size: 1em;
+    }
 }
-.socPages h3 {
-    font-size: 1em;
-}
-.refs a, .refs span {
-    padding-left: 10px;
-}
-.accounts {
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;    
-}
+.refs { a span { padding-left: 10px; } }
 .dialogButtons {
     border-top: 1px solid #c8c8c8;
     padding-top: 15px;
@@ -106,13 +85,14 @@ div.buttons > span {
     position: relative;
     left: -15px;
     width: 600px;
-}
-.dialogButtons div {
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.dialogButtons span {
-    margin-right: 5px;
+
+    div {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    span {
+        margin-right: 5px;
+    }
 }
 .checks {
     margin-top: 10px;

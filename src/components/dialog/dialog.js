@@ -1,8 +1,7 @@
 import React from "react"
-import styles from "./dialog.module.css"
+import styles from "./dialog.module.scss"
 import Button from "../button/button"
-import { FaBan } from 'react-icons/fa'
-import Account from '../accountLink/accountLink'
+import SocialAccounts from "./socialAccounts"
 
 class Dialog extends React.Component {
     showModal = () => {
@@ -12,6 +11,7 @@ class Dialog extends React.Component {
         this.dialog.close();
     }
     render() {
+        const {accounts} = this.props;
         return (
             <dialog id="dialog" className={styles.postDialog} ref={(dialog) => { this.dialog = dialog; }}>
                 <div className={styles.container}>
@@ -42,15 +42,7 @@ class Dialog extends React.Component {
                             <a href="#">сейчас</a>
                         </div>
                     </div>
-                    <div className={styles.accounts}>
-                        <div>
-                            <Account title="Roland Dischein" isClickable={false} />
-                            <input type="date" defaultValue="2018-10-21" />
-                            <span>в</span>
-                            <input type="time" defaultValue="18:10" />
-                            <a href=""><FaBan/></a>
-                        </div>
-                    </div>
+                    <SocialAccounts data={accounts}/>
                     <div className={styles.dialogButtons}>
                         <div>
                             <span onClick={this.close}><Button icon="ok" title="OK" size="small" color="blue"/></span>

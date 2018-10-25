@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngleLeft, FaAngleRight, FaSignOutAlt } from 'react-icons/fa';
-import styles from "./button.module.css"
+import styles from "./button.module.scss"
 
 const faIcon = {
     "none": "",

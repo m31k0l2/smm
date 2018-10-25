@@ -1,0 +1,45 @@
+@import "../../colors/colors";
+
+.content {
+    .fPeriod {
+        font-size: 0.8em;    
+        margin-right: 0px;
+        padding: 0;
+
+        b, a {
+            padding-right: 3px;
+        }
+
+        a { 
+            padding-left: 3px;
+            text-decoration: none;
+        }
+
+        a.selected {
+            text-decoration: underline;
+        }
+    }
+    
+    .item {
+        flex-basis: 30px;
+        padding: 10px;
+    }
+
+    div:not label {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+
+    label {
+        margin-right: 12px;
+        line-height: 20px;
+    }
+
+    select {
+        width: 290px;
+    }
+
+    label+input {
+        margin-right: 10px;
+    }
+}

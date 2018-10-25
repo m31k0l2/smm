@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./accountFilter.module.css"
+import styles from "./accountFilter.module.scss"
 import Account from '../../accountLink/accountLink'
 
 const AccountCheckbox = ({title}) => (

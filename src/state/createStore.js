@@ -1,14 +1,17 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore as reduxCreateStore, combineReducers } from "redux"
 
-const reducer = (state, action) => {
+const LSB_TOGGLE = (state=true, action) => action.type === `LSB_TOGGLE` ? !state : state
+const RSB_TOGGLE = (state=true, action) => action.type === `RSB_TOGGLE` ? !state : state
+
+const ACCOUNTS = (state=["tonia", "nikita"], action) => {
     switch (action.type) {
-        case `LSB_TOGGLE`: return Object.assign({}, state, { lsbToggleOn: !state.lsbToggleOn, })    
-        case `RSB_TOGGLE`: return Object.assign({}, state, { rsbToggleOn: !state.rsbToggleOn, })
+        case `SET_ACCOUNTS`: return action.accounts
+        default: return state
     }
-    return state
 }
 
-const initialState = { lsbToggleOn: true, rsbToggleOn: true }
+const reducer = combineReducers({LSB_TOGGLE, RSB_TOGGLE, ACCOUNTS})
 
-const createStore = () => reduxCreateStore(reducer, initialState)
+const createStore = () => reduxCreateStore(reducer)
+
 export default createStore

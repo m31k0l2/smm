@@ -3,24 +3,20 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import RSidebar from './rightSidebar'
 
-const Sidebar = ({ rsbToggleOn, handlerToggle }) => (
+const Sidebar = ({ RSB_TOGGLE, ACCOUNTS, handlerToggle }) => (
     <div>
-        <RSidebar isToggleOn={rsbToggleOn} handleClick={handlerToggle}/>
+        <RSidebar isToggleOn={RSB_TOGGLE} handleClick={handlerToggle} accounts={ACCOUNTS}/>
     </div>
 )
   
 Sidebar.propTypes = {
-    rsbToggleOn: PropTypes.bool.isRequired,
+    RSB_TOGGLE: PropTypes.bool.isRequired,
     handlerToggle: PropTypes.func.isRequired,
 }
   
-const mapStateToProps = ({ rsbToggleOn }) => {
-    return { rsbToggleOn }
-}
+const mapStateToProps = ({ RSB_TOGGLE, ACCOUNTS }) => ({ RSB_TOGGLE, ACCOUNTS })
   
-const mapDispatchToProps = dispatch => {
-    return { handlerToggle: () => dispatch({ type: `RSB_TOGGLE` }) }
-}
+const mapDispatchToProps = dispatch => ({ handlerToggle: () => dispatch({ type: `RSB_TOGGLE` }) })
   
 const ConnectedSidebar = connect(
     mapStateToProps,

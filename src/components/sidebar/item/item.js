@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAddressBook, FaRegAddressCard, FaEnvelopeSquare } from 'react-icons/fa';
-import styles from "./item.module.css"
+import styles from "./item.module.scss"
 import { Link } from "gatsby"
 
 const faIcon = {

@@ -1,23 +1,23 @@
-@value colors: "../../colors/colors.css";
-@value mGrayBorder, mLightGray, mGray, mDarkGray, mRef, mBlue, mSelected from colors;
+@import "../../colors/colors.scss";
 
 body::-webkit-scrollbar {
     display: none;
 }
 .sidebar {
-    border: 1px solid mGrayBorder;
+    border: 1px solid $mGrayBorder;
     width: 250px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: mLightGray;
-}
-.sidebar a {
-    text-decoration: none;
-    height: 100%;
+    background-color: $mLightGray;
+
+    a {
+        text-decoration: none;
+        height: 100%;
+    }
 }
 .button {
-    background-color: mDarkGray;
+    background-color: $mDarkGray;
 }
 .empty {
     flex-basis: auto;
@@ -30,7 +30,6 @@ body::-webkit-scrollbar {
 }
 .hideSidebar {
     width: 50px;
-    /* position: fixed; */
 }
 div[data-descr] {
     max-height: 55px;
@@ -46,7 +45,7 @@ div[data-descr] {
     border-radius: 10px;
     padding-left: 1em;
     padding-right: 1em;
-    background-color: mSelected;
+    background-color: $mSelected;
     color: white;
     z-index: 1;
 }

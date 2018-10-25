@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./button.module.css"
+import styles from "./button.module.scss"
 import { FaBan, FaPaperPlane, FaCheck, FaImage, FaLink } from 'react-icons/fa'
 
 const colorScheme = {

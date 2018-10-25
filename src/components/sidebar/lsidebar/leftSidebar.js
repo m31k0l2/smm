@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./lsidebar.module.css"
+import styles from "./lsidebar.module.scss"
 import Button from "../button/button"
 import Item from "../item/item"
 

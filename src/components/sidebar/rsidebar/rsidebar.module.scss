@@ -1,0 +1,99 @@
+@import "../../colors/colors";
+
+.sidebar {
+    outline: 1px solid $mGrayBorder;
+    width: 380px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    background-color: $mDarkGray;
+}
+.body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.hat {
+    flex-basis: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-size: 1em;
+    background-color: $mSelected;
+    color: white;
+
+    i {
+        font-size: 1.2em;  
+        padding-right: 0.5em;  
+    }
+
+    div {
+        width: 100%;
+        margin: 0;
+        padding-left: 20px;
+    }
+}
+.empty {
+    flex-basis: 100vh;
+} 
+.hide {
+    padding: 0;
+    border-bottom: 0; 
+    border-top: 1px solid $mLightGray;   
+    text-align: center;
+    background-color: $mDarkGray;
+
+    i {
+        font-size: 1.5em;
+        position: relative;
+        top: 5px;
+    }
+}
+.transform { 
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+.hideSidebar {
+    width: 40px;
+
+    .body {
+        visibility: hidden;
+        position: absolute;
+    }
+    .hat {
+        flex-basis: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $mBlue;
+    
+        span {
+            writing-mode: vertical-rl;
+            text-align: center;
+            transform: rotate(180deg);
+            max-width: 50%;
+            margin-right: 20px;
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+
+            span {
+                margin-left: -2px;
+            }
+        }
+        &:hover { background-color: $mSelected; }
+    }
+    &:hover {
+        width: 50px; 
+        cursor: pointer;
+    }
+}

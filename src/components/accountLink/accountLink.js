@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./accountLink.module.css"
+import styles from "./accountLink.module.scss"
 import { FaVk } from 'react-icons/fa'
 
 const clickable = {
