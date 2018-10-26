@@ -4,7 +4,7 @@ import RSidebar from "../sidebar/rsidebar/connectedRSidebar"
 import MainPage from "../main/main"
 import styles from "./postLayout.module.css"
 
-export default ({data}) => (    
+export default () => (    
   <div className={styles.container}>
     <div className={styles.lsidebar}><LSidebar selectId={1} /></div>
     <div className={styles.main}>

@@ -1,10 +1,11 @@
 import React from "react"
 import styles from "./button.module.scss"
-import { FaBan, FaPaperPlane, FaCheck, FaImage, FaLink } from 'react-icons/fa'
+import { FaBan, FaPaperPlane, FaCheck, FaImage, FaLink, FaVk } from 'react-icons/fa'
 
 const colorScheme = {
     "gray": styles.gray,
-    "blue": styles.blue
+    "blue": styles.blue,
+    "vk": styles.vk
 }
 const icons = {
     "none": "",
@@ -12,6 +13,7 @@ const icons = {
     "post": <i><FaPaperPlane/></i>,
     "ok": <i><FaCheck/></i>,
     "image": <i><FaImage/></i>,
+    "vk": <i><FaVk/></i>,
     "link": <i><FaLink/></i>
 }
 const sizeList = {

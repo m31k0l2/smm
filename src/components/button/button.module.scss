@@ -1,6 +1,6 @@
 @import "../colors/colors.scss";
 
-a.button {
+.button {
     display: inline-block;
     margin: 0.1em;
     border: 1px solid $mSelected;
@@ -21,7 +21,7 @@ a.button {
     }
 
     i {
-        padding-left: 0.2em;
+        padding-left: 0.1em;
         font-size: 1.2em;
         position: relative;
         top: 0.2em;
@@ -34,8 +34,15 @@ a.button {
 }
 .blue {
     color: white;
-    background-color: $mDarkBlue;        
+    background-color: $mDarkBlue;
+    &:hover {
+        background-color: $mBlue;        
+    }
 }
-.blue:hover {
-    background-color: $mBlue;        
+.vk {
+    color: white;
+    background-color: #597da0;
+    &:hover {
+        background-color: $mBlue;
+    }
 }

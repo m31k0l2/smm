@@ -1,39 +1,37 @@
 import React from "react"
-import styles from "./index/index.module.css"
+import styles from "./index/index.module.scss"
 import { Link } from "gatsby"
 import freeofcharge from "./index/pics/freeofcharge.png"
 import social from "./index/pics/social.png"
 
 export default () => (
-<div>
-    <div className={styles.wrapper}>
-        <div className={styles.part1}>
-            <header>
-                <h1>SMM-PUBLISHER</h1>
-                <Link to="/login/">Вход</Link>
-            </header>
-            <h2>Автопостинг в социальные сети</h2>
-            <img src={social} alt=""/>
-            <Link to="/login/">Попробывать бесплатно</Link>
-            <article>
-                    <h3>
-                        Автопостинг – это автоматическая публикация текста, фото
-                        и видео материалов, по заранее запланированному расписанию.
-                    </h3>
-                    <ul>
-                        <li>
-                            Вы планируете любое количество публикаций на неограниченный
-                            период времени. После этого сервис <b>SMM-PUBLISHER</b> публикует ваши
-                            посты в автоматическом режиме в назначенное время.
-                        </li>
-                        <li>
-                            Объединяйте аккаунты соцстей в проекты и настраивайте все
-                            необходимые функции для оформления публикаций: геометки,
-                            хештеги, опросы, стикеры и многое другое (более 20 настроек).
-                        </li>
-                    </ul>
-            </article>
-        </div>                        
+<div className={styles.wrapper}>
+    <div className={styles.part1}>
+        <header>
+            <h1>SMM-PUBLISHER</h1>
+            <Link to="/login/">Вход</Link>
+        </header>
+        <h2>Автопостинг в социальные сети</h2>
+        <img src={social} alt=""/>
+        <Link to="/login/">Попробывать бесплатно</Link>
+        <article>
+                <h3>
+                    Автопостинг – это автоматическая публикация текста, фото
+                    и видео материалов, по заранее запланированному расписанию.
+                </h3>
+                <ul>
+                    <li>
+                        Вы планируете любое количество публикаций на неограниченный
+                        период времени. После этого сервис <b>SMM-PUBLISHER</b> публикует ваши
+                        посты в автоматическом режиме в назначенное время.
+                    </li>
+                    <li>
+                        Объединяйте аккаунты соцстей в проекты и настраивайте все
+                        необходимые функции для оформления публикаций: геометки,
+                        хештеги, опросы, стикеры и многое другое (более 20 настроек).
+                    </li>
+                </ul>
+        </article>
     </div>
     <div className={styles.wrapper}>
         <div className={styles.part2}>
@@ -81,8 +79,10 @@ export default () => (
             <p>Вступай в сообщество сммщиков, знающих цену времени</p>
             <Link to="/login/">Попробывать бесплатно</Link>
         </div>
+        <div className={styles.footerWrapper}>
+            <footer>
+                <h3>m31k0l2@gmail.com (2018)</h3>
+            </footer>
+        </div>
     </div>
-    <footer>
-        <h3>m31k0l2@gmail.com (2018)</h3>
-    </footer>
 </div>)

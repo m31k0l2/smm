@@ -1,0 +1,30 @@
+@import "../colors/colors.scss";
+.vkButton {
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    background-color: #597da0;
+    border-radius: 2px;
+    box-sizing: content-box;
+    line-height: 20px;
+    padding: 5px;
+
+    &:hover {
+        background-color: $mBlue;
+    }
+
+    span {
+        font-weight: 200;
+        font-size: 12px;
+    }
+
+    .vkIcon {
+        border-right: 1px solid black;
+        display: inline-block;
+        font-size: 18px;        
+        // &:nth-child(1) {
+        //     position: relative;
+        //     top: 2px;
+        // }
+    }
+}

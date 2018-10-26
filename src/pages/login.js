@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./login/login.module.css"
+import styles from "./login/login.module.scss"
 import { Link } from "gatsby"
 import { FaVk } from 'react-icons/fa';
 import Footer from '../components/footer/footer'
@@ -10,7 +10,7 @@ export default () => (
     <div className={styles.content}>
         <h2>Войти</h2>
         <p>Пожалуйста, войдите с одним из ваших социальных аккаунтов.</p>
-        <Link to="/post/" className={styles.vk} data-vk><i className={styles.vkIcon}><FaVk/></i><span>Войти с ВКонтакте</span></Link>
+        <Link to="/post/" className={styles.vkButton}><i className={styles.vkIcon}><FaVk/></i><span>Войти с ВКонтакте</span></Link>
     </div>
     <Footer />
 </div>)
