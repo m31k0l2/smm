@@ -76,7 +76,9 @@ div.buttons > span {
         font-size: 1em;
     }
 }
-.refs { a span { padding-left: 10px; } }
+.refs { 
+    span { padding: 0 10px; } 
+}
 .dialogButtons {
     border-top: 1px solid #c8c8c8;
     padding-top: 15px;
@@ -96,4 +98,12 @@ div.buttons > span {
 }
 .checks {
     margin-top: 10px;
+    input {
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+    }
+    label {
+        cursor: pointer;
+    }
 }

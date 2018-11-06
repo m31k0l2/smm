@@ -13,11 +13,11 @@
     }
     i {
         font-size: 1.5em;
-        color: $mRef;
-        margin-top: 0.3em; 
         margin-left: 10px;  
-    }
-    &:hover:not(.selected) {
+        position: relative;
+        top: 2px;
+    }    
+    &.clickable:hover:not(.selected) {
         cursor: pointer;
         background-color: $mGray;
     }
@@ -26,8 +26,10 @@
     justify-content: flex-start; 
     margin-left: 10px;
 }
-.hRef {
-    color: $mRef;
+.clickable {
+    i, span {
+        color: $mRef;
+    }    
 }
 .selected {
     background-color: $mSelected;

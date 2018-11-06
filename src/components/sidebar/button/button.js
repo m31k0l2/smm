@@ -9,8 +9,8 @@ const faIcon = {
     "exit": <i><FaSignOutAlt/></i>
 }
 
-export default ({ title = 'React', icon = 'none', height = 40, isToggleOn = true, iconAlign = 'left' }) => (
-    <div style={ {height: height} } className={[styles.button, styles.center].join(" ")}>
+export default ({ title = 'React', icon = 'none', height = 40, isToggleOn = true, iconAlign = 'left', action }) => (
+    <div style={ {height: height} } className={[styles.button, styles.center].join(" ")} onClick={action}>
         {iconAlign === 'left' ? faIcon[icon] : ''}
         { isToggleOn ? <span className={styles.hRef}>{title}</span> : "" }
         {iconAlign === 'right' ? faIcon[icon] : ''}

@@ -23,6 +23,11 @@ module.exports = {
           path: `${__dirname}/src/data/`,
         },
       },
+      {
+        resolve: `gatsby-source-mongodb`,
+        options: { dbName: `cmm`, collection: `accounts` },
+        auth: { user: `nikita`, password: `1367` }
+      },
       `gatsby-transformer-json`,
       `gatsby-plugin-sass`,
     ],

@@ -1,0 +1,16 @@
+{
+  "id": "2",
+  "time": "09:05",
+  "date": "2018-10-28",
+  "account": "Roland Dischain",
+  "social": "vk",
+  "recipients": [
+    {
+      "account": "Tonia Razinkova",
+      "social": "vk",
+      "date": "2018-10-29",
+      "time": "11:30"
+    }
+  ],
+  "text": "hello!"
+}

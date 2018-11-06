@@ -3,20 +3,20 @@ import { FaBan } from 'react-icons/fa'
 import Account from '../accountLink/accountLink'
 import styles from "./socialAccounts.module.scss"
 
-const SocialAccount = ({title}) => (
+const SocialAccount = ({title, date, time, disabled}) => (
     <div className={styles.sa}>
         <Account title={title} isClickable={false} />
-        <input type="date" defaultValue="2018-10-21" />
+        <input type="date" defaultValue={date} disabled={disabled} />
         <span>в</span>
-        <input type="time" defaultValue="18:10" />
+        <input type="time" defaultValue={time} disabled={disabled} />
         <a href="#"><FaBan/></a>
     </div>
 )
 
-export default ({data}) => (    
+export default ({recipients, disabled}) => (
     <div>
-        { data.map(
-            ( title, index ) => <SocialAccount title={title} key={index}/> 
+        { recipients.map(
+            ( {account, date, time} ) => <SocialAccount title={account} date={date} time={time} disabled={disabled} key={Math.random()}/> 
         )}
     </div>
 )

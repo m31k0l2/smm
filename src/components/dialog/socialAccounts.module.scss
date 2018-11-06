@@ -1,7 +1,7 @@
 @import "../colors/colors.scss";
 .sa {
     display: grid;
-    grid-template-columns: 3fr 2fr 10px 1fr 20px; 
+    grid-template-columns: 3fr 2fr 20px 1fr 20px; 
     width: 100%;   
     align-items: center;
     height: fit-content;
@@ -12,5 +12,8 @@
         padding: 3px;
         color: $mDarkBlue;
         &:hover { color: red; }
+    }
+    span {
+        margin-left: 5px;
     }
 }
